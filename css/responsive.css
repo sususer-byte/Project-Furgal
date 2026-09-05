@@ -5,7 +5,7 @@
 /* Laptop & Medium Screens (< 1200px) */
 @media (max-width: 1200px) {
   .hero-title {
-    font-size: 3.75rem;
+    font-size: 3.2rem;
   }
 
   .features-grid {
@@ -15,20 +15,16 @@
   .zigzag-item {
     gap: 40px;
   }
-
-  .download-platforms {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* Tablets (< 992px) */
 @media (max-width: 992px) {
   .hero-title {
-    font-size: 3.25rem;
+    font-size: 2.85rem;
   }
 
   .hero-desc {
-    font-size: 1.15rem;
+    font-size: 1.08rem;
   }
 
   .about-grid {
@@ -41,13 +37,13 @@
   }
 
   .zigzag-list {
-    gap: 80px;
+    gap: 70px;
   }
 
   .zigzag-item, .zigzag-item.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
-    gap: 32px;
+    gap: 30px;
   }
 
   .zigzag-item.reverse > * {
@@ -56,11 +52,11 @@
 
   .support-container {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 44px;
   }
 
   .donate-card {
-    max-width: 500px;
+    max-width: 480px;
     margin: 0 auto;
     width: 100%;
   }
@@ -78,11 +74,10 @@
 /* Mobile Devices (< 768px) */
 @media (max-width: 768px) {
   .navbar {
-    height: 70px;
-  }
-
-  .navbar.scrolled {
-    height: 64px;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 56px;
+    padding: 0 14px;
   }
 
   .mobile-toggle-btn {
@@ -93,18 +88,19 @@
 
   .nav-menu {
     position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
+    top: 72px;
+    left: 10px;
+    right: 10px;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(15, 39, 68, 0.1);
+    border: 1px solid rgba(15, 39, 68, 0.1);
+    border-radius: 24px;
     flex-direction: column;
-    padding: 24px;
-    gap: 16px;
+    padding: 20px;
+    gap: 12px;
     transform: translateY(-120%);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 25px 40px rgba(15, 39, 68, 0.1);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px rgba(15, 39, 68, 0.15);
   }
 
   .nav-menu.open {
@@ -114,7 +110,7 @@
   .nav-link-btn {
     width: 100%;
     justify-content: center;
-    padding: 12px;
+    padding: 10px;
   }
 
   .account-dropdown-wrapper {
@@ -135,18 +131,23 @@
   }
 
   .hero-section {
-    padding-top: 110px;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     min-height: auto;
   }
 
+  .hero-glass-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
   .hero-title {
-    font-size: 2.6rem;
+    font-size: 2.35rem;
   }
 
   .hero-desc {
-    font-size: 1.05rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-bottom: 24px;
   }
 
   .hero-actions {
@@ -163,11 +164,11 @@
   }
 
   .section-title {
-    font-size: 2.15rem;
+    font-size: 2rem;
   }
 
   .about-section, .features-section, .detailed-features-section, .download-section, .contact-section, .support-section {
-    padding: 80px 0;
+    padding: 70px 0;
   }
 
   .features-grid {
@@ -175,7 +176,7 @@
   }
 
   .zigzag-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 
   .form-row {
@@ -183,19 +184,23 @@
   }
 
   .contact-card {
-    padding: 32px 20px;
+    padding: 28px 18px;
   }
 
   .download-box {
-    padding: 40px 24px;
+    padding: 36px 20px;
   }
 
-  .download-platforms {
-    grid-template-columns: 1fr;
+  .windows-platform-card {
+    padding: 20px;
   }
 
   .donate-card {
-    padding: 30px 20px;
+    padding: 26px 18px;
+  }
+
+  .donate-qr-wrapper {
+    width: 200px;
   }
 
   .bank-row {
@@ -205,16 +210,16 @@
   }
 
   .gate-card {
-    padding: 36px 24px;
+    padding: 32px 20px;
   }
 
   .gate-avatar-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .auth-modal-card {
-    padding: 30px 20px;
+    padding: 28px 18px;
     border-radius: 24px;
   }
 }
@@ -222,14 +227,14 @@
 /* Small Phones (< 480px) */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .brand-name {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 }

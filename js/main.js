@@ -34,10 +34,10 @@ function initLoadingGate() {
 
   let progress = 0;
   const loadingSteps = [
-    { threshold: 25, text: 'Synchronizing neural models...' },
-    { threshold: 60, text: 'Calibrating multi-modal vision...' },
-    { threshold: 85, text: 'Connecting high-speed inference...' },
-    { threshold: 100, text: 'Furgal AI is ready! Click to enter.' }
+    { threshold: 30, text: 'Loading Furgal companion core...' },
+    { threshold: 65, text: 'Preparing desktop interface...' },
+    { threshold: 85, text: 'Connecting local modules...' },
+    { threshold: 100, text: 'Furgal is ready! Click to enter.' }
   ];
 
   const interval = setInterval(() => {
@@ -60,7 +60,7 @@ function initLoadingGate() {
         statusText.classList.add('pulse-hint');
       }, 300);
     }
-  }, 100);
+  }, 90);
 
   // Click gate anywhere to enter
   const enterSite = (e) => {
@@ -92,7 +92,7 @@ function initLoadingGate() {
       v.play().catch(() => {});
     });
 
-    showToast('✨ Welcome to Furgal AI! Explore the future of neural intelligence.');
+    showToast('✨ Welcome to Furgal AI! Your supportive desktop companion.');
   };
 
   gateOverlay.addEventListener('click', enterSite);
@@ -105,7 +105,7 @@ function initNavbar() {
   const navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -120,7 +120,7 @@ function initNavbar() {
       const targetElem = document.querySelector(targetId);
       if (targetElem) {
         e.preventDefault();
-        const navHeight = navbar ? navbar.offsetHeight : 80;
+        const navHeight = navbar ? navbar.offsetHeight + 20 : 80;
         const targetPos = targetElem.getBoundingClientRect().top + window.pageYOffset - navHeight;
         window.scrollTo({
           top: targetPos,
@@ -181,7 +181,6 @@ function initAuthModal() {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     setAuthTab(mode);
-    // Close dropdown
     const accountWrapper = document.getElementById('account-dropdown-wrapper');
     if (accountWrapper) accountWrapper.classList.remove('open');
   };
@@ -235,7 +234,7 @@ function initAuthModal() {
         showToast('⚠️ Please enter your email or username.', 'warn');
         return;
       }
-      showToast(`🔑 Preview Mode: Authenticated as "${loginId}". Backend integration active soon!`);
+      showToast(`🔑 Preview Mode: Authenticated as "${loginId}". Backend integration ready soon!`);
       closeModal();
     });
   }
@@ -278,14 +277,12 @@ function initContactForm() {
       return;
     }
 
-    // Format mailto link to robincleverlearn@gmail.com
     const subject = encodeURIComponent(`Furgal Inquiry from ${firstName} ${lastName}`);
     const body = encodeURIComponent(
       `Sender: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent via Furgal AI Contact Form`
     );
     const mailtoUrl = `mailto:robincleverlearn@gmail.com?subject=${subject}&body=${body}`;
 
-    // Open mail client
     window.location.href = mailtoUrl;
 
     showToast('✉️ Message prepared for robincleverlearn@gmail.com! Opening your mail client...');
@@ -300,7 +297,7 @@ function initDownloadButtons() {
   const downloadBtns = document.querySelectorAll('.btn-download-action');
   downloadBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      showToast('📥 Downloading Furgal test file... (d:/WebsiteDemo/TunaWebsite/downloads/)');
+      showToast('📥 Downloading Furgal test installer for Windows...');
     });
   });
 }
@@ -313,13 +310,13 @@ function initCopyBankButton() {
   if (!copyBtn) return;
 
   copyBtn.addEventListener('click', () => {
-    const accNum = '0973669611';
+    const accNum = '67820107979';
     navigator.clipboard.writeText(accNum).then(() => {
       const originalText = copyBtn.textContent;
       copyBtn.textContent = 'Copied!';
       copyBtn.style.background = '#0284C7';
       copyBtn.style.color = '#FFFFFF';
-      showToast('✅ Bank Account number (0973669611) copied to clipboard!');
+      showToast('✅ Account Number (67820107979 - PHAM MINH TUAN) copied to clipboard!');
 
       setTimeout(() => {
         copyBtn.textContent = originalText;
@@ -327,7 +324,7 @@ function initCopyBankButton() {
         copyBtn.style.color = '';
       }, 2500);
     }).catch(() => {
-      showToast('⚠️ Could not copy automatically. Number: 0973669611');
+      showToast('⚠️ Account number: 67820107979');
     });
   });
 }
@@ -358,7 +355,6 @@ function initVideoPlayback() {
     v.loop = true;
   });
 
-  // Intersection observer to auto-play when visible
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Furgal - Versatile Next-Gen AI Assistant</title>
-  <meta name="description" content="Furgal AI is your ultra-fast, versatile all-in-one neural companion engineered to streamline workflows, elevate creativity, and empower daily life." />
+  <title>Furgal - Supportive Desktop AI Companion</title>
+  <meta name="description" content="Furgal AI is an accessible, supportive desktop AI companion designed to assist you with daily digital tasks, organize workflows, and respect your privacy on Windows." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
@@ -28,7 +28,7 @@
         </div>
       </div>
       <h2 class="gate-title">Furgal AI</h2>
-      <p class="gate-status-text" id="gate-status-text">Booting core neural matrix...</p>
+      <p class="gate-status-text" id="gate-status-text">Loading Furgal companion core...</p>
       
       <!-- Progress Bar -->
       <div class="gate-progress-track">
@@ -38,18 +38,18 @@
       <!-- Action Button (Revealed when ready) -->
       <button class="gate-start-btn btn-neon btn-neon-primary" id="gate-start-btn">
         <span>Click to Enter Furgal</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 12h14"></path>
           <path d="m12 5 7 7-7 7"></path>
         </svg>
       </button>
 
-      <p class="gate-click-hint">⚡ Click anywhere on screen to enter</p>
+      <p class="gate-click-hint">⚡ Click anywhere on screen to begin</p>
     </div>
   </div>
 
   <!-- ========================================================================
-       2. TOP NAVIGATION BAR
+       2. FLOATING SEARCH-BAR STYLE NAVIGATION BAR
        ======================================================================== -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
@@ -65,7 +65,7 @@
       <nav class="nav-menu" id="nav-menu">
         <!-- Support Section Link -->
         <a href="#support" class="nav-link-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
           </svg>
           <span>Support</span>
@@ -73,7 +73,7 @@
 
         <!-- Download Section Link -->
         <a href="#download" class="nav-link-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -83,22 +83,21 @@
 
         <!-- Contact Section Link -->
         <a href="#contact" class="nav-link-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="20" height="16" x="2" y="4" rx="2"></rect>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
           </svg>
           <span>Contact</span>
         </a>
 
-        <!-- Account Dropdown with Animated Rotating Chevron -->
+        <!-- Account Dropdown with Clean Rotating Chevron -->
         <div class="account-dropdown-wrapper" id="account-dropdown-wrapper">
-          <button class="account-btn btn-neon-secondary" id="account-btn" aria-haspopup="true" aria-expanded="false">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button class="account-btn" id="account-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
             <span>Account</span>
-            <!-- Rotating Arrow Icon -->
             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
@@ -129,7 +128,7 @@
 
       <!-- Mobile Hamburger Button -->
       <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <line x1="4" y1="6" x2="20" y2="6"></line>
           <line x1="4" y1="18" x2="20" y2="18"></line>
@@ -139,50 +138,34 @@
   </header>
 
   <!-- ========================================================================
-       3. HERO SECTION (Tuna AI style with Background.mp4 loop)
+       3. HERO SECTION (Untinted 1080p Full HD Video Background)
        ======================================================================== -->
   <section class="hero-section" id="hero">
-    <!-- Dynamic Looping Video Background -->
+    <!-- Pure 1080p Full HD Video Background - No Blue Overlay -->
     <video class="hero-video-bg" id="hero-video" autoplay loop muted playsinline>
       <source src="videos/Background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    
-    <!-- Video Dark/Gradient Overlay -->
-    <div class="hero-overlay"></div>
 
     <div class="container hero-container">
-      <div class="hero-content">
-        <!-- Badges -->
-        <div class="hero-badge-group">
-          <div class="hero-badge">
-            <span class="hero-badge-pulse"></span>
-            <span>Next-Gen Neural Assistant</span>
-          </div>
-          <div class="hero-speed-tag">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            <span>0.08s Inference Latency</span>
-          </div>
-        </div>
-
-        <!-- Headline -->
+      <!-- Translucent Glass Card preserves video colors while ensuring comfortable text contrast -->
+      <div class="hero-glass-card">
+        <!-- Headline: Well-spaced, not squished -->
         <h1 class="hero-title">
           Furgal AI
           <span class="title-accent">Assistant</span>
         </h1>
 
-        <!-- Short Description about Furgal's Versatility -->
+        <!-- Grounded Formal Description -->
         <p class="hero-desc">
-          The ultimate versatile AI companion engineered to effortlessly accelerate your workflows, spark creativity, and simplify your digital life.
+          A dedicated AI companion designed to assist you in managing daily digital tasks, organizing workflows, and providing supportive pair assistance.
         </p>
 
-        <!-- CTA Action: Download Now (Preview button removed as requested) -->
+        <!-- CTA Action: Download for Windows -->
         <div class="hero-actions">
           <a href="#download" class="btn-neon btn-neon-primary btn-neon-lg">
-            <span>Download Now</span>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <span>Download for Windows</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
@@ -194,79 +177,78 @@
     <!-- Scroll Down Hint -->
     <div class="hero-scroll-hint">
       <span>Scroll Down</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="m6 9 6 6 6-6"></path>
       </svg>
     </div>
   </section>
 
   <!-- ========================================================================
-       4. ABOUT / INTRODUCTION SECTION
+       4. ABOUT / INTRODUCTION SECTION (Formal, Grounded & Practical)
        ======================================================================== -->
   <section class="about-section" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-text-content">
           <span class="section-badge">About Furgal</span>
-          <h3>Intelligent versatility tailored to how you work, create, and think</h3>
+          <h3>A Practical AI Companion for Your Desktop</h3>
           <p>
-            Furgal represents a quantum leap in personalized AI interaction. Unlike rigid monolithic models, Furgal dynamically balances real-time reasoning, deep contextual memory, and omni-channel multimodal understanding to provide an intuitive experience across every task.
+            Furgal is developed as a supportive assistant to help you navigate everyday tasks, organize work items, and streamline routines. Built with a focus on simplicity and utility, Furgal acts as an accessible digital companion that works alongside you.
           </p>
 
           <div class="about-pill-list">
             <div class="about-pill-item">
               <div class="about-pill-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                 </svg>
               </div>
               <div class="about-pill-content">
-                <h4>Dynamic Task Mastery</h4>
-                <p>Adapts instantly from coding and technical writing to natural voice dialogue and visual creation.</p>
+                <h4>Everyday Task Support</h4>
+                <p>Assists with organizing checklists, drafting routine content, and summarizing active notes.</p>
               </div>
             </div>
 
             <div class="about-pill-item">
               <div class="about-pill-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                 </svg>
               </div>
               <div class="about-pill-content">
-                <h4>Private & Local-First Security</h4>
-                <p>Industry-grade encryption with on-device computing options to guarantee your data stays entirely yours.</p>
+                <h4>Maximum Privacy</h4>
+                <p>Local-first design ensures your personal workflows, documents, and interactions stay strictly under your control.</p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Grounded Principles Card (Real, Honest Attributes) -->
         <div class="about-visual-card">
-          <span class="section-badge" style="background: rgba(255,255,255,0.1); color: #00D2FF; border-color: rgba(0,210,255,0.4);">
-            Engine Benchmarks
+          <span class="section-badge" style="background: rgba(255,255,255,0.1); color: #00D2FF; border-color: rgba(0,210,255,0.3);">
+            Design Focus
           </span>
-          <h4 style="font-size: 1.6rem; font-family: var(--font-heading); margin: 16px 0 12px; color: #FFFFFF;">
-            High-Performance Neural Architecture
-          </h4>
-          <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6;">
-            Constructed with ultra-dense neural weights, Furgal delivers state-of-the-art accuracy with fraction-of-a-second latency on standard hardware.
+          <h4 class="about-card-title">Companion Architecture</h4>
+          <p class="about-card-sub">
+            Built for transparent, reliable daily utility on Windows desktop environments.
           </p>
 
           <div class="about-stat-row">
             <div class="about-stat-box">
-              <div class="about-stat-num">0.08s</div>
-              <div class="about-stat-label">Average Response Latency</div>
+              <div class="about-stat-num">Task Partner</div>
+              <div class="about-stat-label">Assists with daily workflows and notes</div>
             </div>
             <div class="about-stat-box">
-              <div class="about-stat-num">99.8%</div>
-              <div class="about-stat-label">Execution Precision</div>
+              <div class="about-stat-num">Maximum Privacy</div>
+              <div class="about-stat-label">Local data ownership & confidential design</div>
             </div>
             <div class="about-stat-box">
-              <div class="about-stat-num">256K</div>
-              <div class="about-stat-label">Context Window Tokens</div>
+              <div class="about-stat-num">Windows Native</div>
+              <div class="about-stat-label">Tailored for Windows 10 & 11</div>
             </div>
             <div class="about-stat-box">
-              <div class="about-stat-num">100%</div>
-              <div class="about-stat-label">Privacy Shielded</div>
+              <div class="about-stat-num">Adaptable Tone</div>
+              <div class="about-stat-label">Friendly, polite, and helpful companion</div>
             </div>
           </div>
         </div>
@@ -280,10 +262,10 @@
   <section class="features-section" id="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Core Capabilities</span>
-        <h2 class="section-title">Designed for Limitless Versatility</h2>
+        <span class="section-badge">Core Focus Areas</span>
+        <h2 class="section-title">How Furgal Assists Your Day</h2>
         <p class="section-desc">
-          Hover over any card to experience Furgal’s concentrated intelligence highlights with dynamic chromatic resonance.
+          Explore the primary areas where Furgal works alongside you to assist your daily workflow.
         </p>
       </div>
 
@@ -292,7 +274,7 @@
         <!-- Feature 1 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
               <polyline points="3.29 7 12 12 20.71 7"></polyline>
               <line x1="12" y1="22" x2="12" y2="12"></line>
@@ -300,77 +282,81 @@
           </div>
           <h3 class="feature-keyword">Multimodal</h3>
           <p class="feature-box-desc">
-            Seamlessly comprehends voice, video, text, and documents within a unified neural framework.
+            Understands voice, screen context, and text to assist with active on-screen tasks.
           </p>
         </div>
 
         <!-- Feature 2 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
             </svg>
           </div>
-          <h3 class="feature-keyword">Ultra-Fast</h3>
+          <h3 class="feature-keyword">Personality</h3>
           <p class="feature-box-desc">
-            Ultra-low latency inference engine delivering instant cognitive responses in under 80 milliseconds.
+            A polite, warm, and supportive digital companion demeanor customized to your rhythm.
           </p>
         </div>
 
         <!-- Feature 3 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="18" x="3" y="3" rx="2"></rect>
               <path d="m9 12 2 2 4-4"></path>
             </svg>
           </div>
-          <h3 class="feature-keyword">Automation</h3>
+          <h3 class="feature-keyword">Task Automation</h3>
           <p class="feature-box-desc">
-            Autonomous multi-step task execution capable of orchestrating complex workflows unattended.
+            Assists with automating repetitive desktop sequences and keeping tasks cleanly organized.
           </p>
         </div>
 
         <!-- Feature 4 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <path d="M12 6v6l4 2"></path>
             </svg>
           </div>
-          <h3 class="feature-keyword">Deep Memory</h3>
+          <h3 class="feature-keyword">Session Context</h3>
           <p class="feature-box-desc">
-            Continuous associative recall that preserves nuances and personal preferences across all conversations.
+            Retains relevant task context across your working session as supported by the active model.
           </p>
         </div>
 
         <!-- Feature 5 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="8" height="8" rx="1"></rect>
+              <rect x="13" y="3" width="8" height="8" rx="1"></rect>
+              <rect x="3" y="13" width="8" height="8" rx="1"></rect>
+              <rect x="13" y="13" width="8" height="8" rx="1"></rect>
             </svg>
           </div>
-          <h3 class="feature-keyword">Cross-Platform</h3>
+          <h3 class="feature-keyword">Windows Ready</h3>
           <p class="feature-box-desc">
-            Unified synchronization ensuring your assistant is ready on Windows, macOS, Linux, and Mobile.
+            Engineered specifically to run smoothly and reliably on Windows desktop environments.
           </p>
         </div>
 
         <!-- Feature 6 -->
         <div class="feature-box">
           <div class="feature-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <h3 class="feature-keyword">Zero-Knowledge</h3>
+          <h3 class="feature-keyword">Maximum Privacy</h3>
           <p class="feature-box-desc">
-            Cryptographically sealed workspace where your conversations and files are never stored or mined.
+            Local & secure: your conversations and personal workflow stay on your device—your data is yours.
           </p>
         </div>
       </div>
@@ -378,7 +364,7 @@
   </section>
 
   <!-- ========================================================================
-       6. DETAILED FEATURES (6 Zig-Zag Alternating Showcases with Videos)
+       6. DETAILED FEATURES (6 Zig-Zag Showcases with "Bản demo" badge)
        ======================================================================== -->
   <section class="detailed-features-section" id="detailed-features">
     <div class="container">
@@ -386,7 +372,7 @@
         <span class="section-badge">Deep Dive</span>
         <h2 class="section-title">Explore Furgal In Action</h2>
         <p class="section-desc">
-          Discover how each core pillar delivers unprecedented productivity and fluid assistance in your everyday stack.
+          A closer look at how Furgal assists with your daily computing and creative tasks.
         </p>
       </div>
 
@@ -395,22 +381,22 @@
         <div class="zigzag-item">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 01</span>
-            <h3 class="zigzag-title">Real-Time Fluid Voice & Audio Synthesis</h3>
+            <h3 class="zigzag-title">Fluid Voice & Audio Dialogue</h3>
             <p class="zigzag-desc">
-              Experience conversational audio with natural pacing, emotive prosody, and zero awkward pauses. Furgal listens actively and responds with human-like warmth.
+              Engage in natural, interactive voice dialogue with clear audio pacing and a supportive companion tone.
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Sub-80ms full-duplex conversational audio</span>
+                <span>Responsive conversational voice dialogue</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Natural conversational interruptions and interjections</span>
+                <span>Natural conversational flow for task clarification</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Polyglot fluency across 50+ languages</span>
+                <span>Supportive voice interaction for hands-free queries</span>
               </li>
             </ul>
           </div>
@@ -420,7 +406,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_1.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -429,22 +415,22 @@
         <div class="zigzag-item reverse">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 02</span>
-            <h3 class="zigzag-title">Visual Workspace & Screen Comprehension</h3>
+            <h3 class="zigzag-title">Screen & Context Inspection</h3>
             <p class="zigzag-desc">
-              Share your screen, design files, or code editors. Furgal analyzes visual contexts with millimeter precision, diagnosing bugs and refining layouts in real-time.
+              Share your screen, documents, or code editors. Furgal inspects visual context with high accuracy to assist with explanations and guidance (image generation is not supported).
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Instant UI/UX inspection and design translation</span>
+                <span>High accuracy visual screen and document review</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Document, receipt, and whiteboard optical parsing</span>
+                <span>Assists with understanding diagrams, code, and text</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cross-referencing live diagrams with code logic</span>
+                <span>Note: Furgal focuses on comprehension and does not generate images</span>
               </li>
             </ul>
           </div>
@@ -454,7 +440,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_2.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -463,22 +449,22 @@
         <div class="zigzag-item">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 03</span>
-            <h3 class="zigzag-title">Autonomous Action & Multi-Step Workflows</h3>
+            <h3 class="zigzag-title">Task & Routine Organization</h3>
             <p class="zigzag-desc">
-              Delegate complex sequences—from web research and data consolidation to calendar orchestration. Furgal self-corrects and delivers finished results.
+              Delegate routine task structuring, note consolidation, and daily scheduling to keep your workspace uncluttered.
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Autonomous browser automation and scraping</span>
+                <span>Step-by-step task breakdown and checklists</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>File formatting, conversion, and archival</span>
+                <span>Notes and document formatting support</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Custom macro synthesis and trigger scheduling</span>
+                <span>Helpful reminders and schedule organizing</span>
               </li>
             </ul>
           </div>
@@ -488,7 +474,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_3.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -497,22 +483,22 @@
         <div class="zigzag-item reverse">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 04</span>
-            <h3 class="zigzag-title">Adaptive Contextual Memory Matrix</h3>
+            <h3 class="zigzag-title">Session Context Continuity</h3>
             <p class="zigzag-desc">
-              No need to re-explain project constraints or personal tone. Furgal stores hierarchical memories securely, retrieving historical insights when relevant.
+              Keeps track of your ongoing task focus throughout the active session, adapting contextually as your work progresses.
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Dynamic recall of active coding repositories</span>
+                <span>Active session memory for ongoing tasks and notes</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>User tone, jargon, and stylistic customization</span>
+                <span>Contextual recall based on the underlying language model</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>One-click memory auditing and permanent erasure</span>
+                <span>Simple user control to reset session context at any time</span>
               </li>
             </ul>
           </div>
@@ -522,7 +508,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_4.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -531,22 +517,22 @@
         <div class="zigzag-item">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 05</span>
-            <h3 class="zigzag-title">Code Intelligence & Automated Debugging</h3>
+            <h3 class="zigzag-title">Code Assistance & Syntax Clarification</h3>
             <p class="zigzag-desc">
-              Pair program with a relentless software architect. Furgal writes clean, idiomatic code, generates unit tests, and detects vulnerabilities before deployment.
+              A helpful pair companion for coding tasks. Furgal helps draft boilerplate, review syntax, and explain code blocks.
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Full-stack support for Python, TS, Rust, Go, C++</span>
+                <span>Multi-language syntax support (Python, JS, C++, etc.)</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Live AST linting and algorithmic optimization</span>
+                <span>Explains error logs and suggests step-by-step fixes</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Automated git commit drafting and PR reviews</span>
+                <span>Helps write clear comments and code documentation</span>
               </li>
             </ul>
           </div>
@@ -556,7 +542,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_5.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -565,22 +551,22 @@
         <div class="zigzag-item reverse">
           <div class="zigzag-info">
             <span class="zigzag-step-num">Feature 06</span>
-            <h3 class="zigzag-title">Universal Plugin & API Interoperability</h3>
+            <h3 class="zigzag-title">Extensibility & Command Integration</h3>
             <p class="zigzag-desc">
-              Furgal natively connects with your terminal, browser, IDE, Slack, Notion, and Discord. Build custom skill extensions with simple Markdown prompts.
+              Connects with your everyday desktop tools and command line through customizable Markdown prompts and skill definitions.
             </p>
             <ul class="zigzag-checklist">
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Standardized Model Context Protocol (MCP) support</span>
+                <span>Extensible with custom prompts and workflow skills</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Local shell command execution with strict permission gate</span>
+                <span>Safe command interaction with explicit user confirmation</span>
               </li>
               <li class="zigzag-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Real-time webhook and notification pipelines</span>
+                <span>Seamless support for desktop notes and task management</span>
               </li>
             </ul>
           </div>
@@ -590,7 +576,7 @@
             </video>
             <div class="video-control-overlay">
               <span class="video-status-dot"></span>
-              <span>Demo • videos/feature_6.mp4</span>
+              <span>Bản demo</span>
             </div>
           </div>
         </div>
@@ -599,7 +585,7 @@
   </section>
 
   <!-- ========================================================================
-       7. DOWNLOAD SECTION
+       7. DOWNLOAD SECTION (Windows Only)
        ======================================================================== -->
   <section class="download-section" id="download">
     <div class="container">
@@ -607,37 +593,24 @@
         <span class="section-badge">Get Started</span>
         <h2 class="section-title">Download Furgal AI</h2>
         <p class="section-desc">
-          Available across desktop and mobile platforms. Test the instant installer package right now.
+          Official desktop release built specifically for Windows.
         </p>
 
-        <!-- Platform Selectors -->
-        <div class="download-platforms">
-          <div class="platform-card active">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="8" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect><rect x="13" y="13" width="8" height="8" rx="1"></rect></svg>
-            <div class="platform-name">Windows</div>
-            <div class="platform-meta">x64 / ARM64 • Win 10+</div>
-          </div>
-
-          <div class="platform-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5"></path></svg>
-            <div class="platform-name">macOS</div>
-            <div class="platform-meta">Apple Silicon & Intel</div>
-          </div>
-
-          <div class="platform-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-            <div class="platform-name">Linux</div>
-            <div class="platform-meta">AppImage / Deb / Tar</div>
-          </div>
-
-          <div class="platform-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
-            <div class="platform-name">Mobile Companion</div>
-            <div class="platform-meta">iOS & Android Sync</div>
+        <!-- Windows Only Platform Card -->
+        <div class="download-single-platform">
+          <div class="windows-platform-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="8" height="8" rx="1"></rect>
+              <rect x="13" y="3" width="8" height="8" rx="1"></rect>
+              <rect x="3" y="13" width="8" height="8" rx="1"></rect>
+              <rect x="13" y="13" width="8" height="8" rx="1"></rect>
+            </svg>
+            <div class="platform-name">Windows 10 / 11</div>
+            <div class="platform-meta">64-bit Desktop Build • v1.0.0</div>
           </div>
         </div>
 
-        <!-- Download Action CTA with Test File Link -->
+        <!-- Download Action CTA -->
         <div class="download-cta-box">
           <a href="downloads/furgal-test-download.txt" download="furgal-setup-test.txt" class="btn-neon btn-neon-primary btn-neon-lg btn-download-action">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
@@ -645,14 +618,8 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            <span>Download Furgal AI for Windows (v1.0.0 Test File)</span>
+            <span>Download Furgal AI for Windows</span>
           </a>
-
-          <!-- Guide note indicating folder path -->
-          <div class="download-tip">
-            <span>💡 Place your production installer file inside:</span>
-            <code>d:\WebsiteDemo\TunaWebsite\downloads\</code>
-          </div>
         </div>
       </div>
     </div>
@@ -667,7 +634,7 @@
         <span class="section-badge">Get in Touch</span>
         <h2 class="section-title">Contact Us</h2>
         <p class="section-desc">
-          Have a question, feedback, or custom feature request? Fill out the form below and your message will be forwarded directly to our team.
+          Have a question, feedback, or suggestion? Send us a message and it will be forwarded directly to our email.
         </p>
       </div>
 
@@ -694,20 +661,20 @@
           <!-- Message Content -->
           <div class="form-group">
             <label class="form-label" for="contact-message">Message Content *</label>
-            <textarea id="contact-message" class="form-textarea" placeholder="Describe your project, question, or partnership inquiry..." required></textarea>
+            <textarea id="contact-message" class="form-textarea" placeholder="Describe your inquiry, suggestion, or question..." required></textarea>
           </div>
 
           <!-- Submit Button with Neon Border -->
           <button type="submit" class="btn-neon btn-neon-primary btn-neon-lg" style="width: 100%;">
             <span>Submit Message</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
             </svg>
           </button>
 
           <p class="contact-footer-note">
-            Inquiries are automatically forwarded to <strong>robincleverlearn@gmail.com</strong>
+            Submissions are forwarded directly to <strong>robincleverlearn@gmail.com</strong>
           </p>
         </form>
       </div>
@@ -715,7 +682,7 @@
   </section>
 
   <!-- ========================================================================
-       9. THANK YOU & SUPPORT / DONATE SECTION
+       9. THANK YOU & SUPPORT / DONATE SECTION (MB Bank VietQR)
        ======================================================================== -->
   <section class="support-section" id="support">
     <div class="container">
@@ -725,45 +692,45 @@
           <span class="section-badge">Gratitude & Backing</span>
           <h3>Thank You for Supporting Furgal!</h3>
           <p>
-            Your encouragement and patronage keep Furgal independent, highly optimized, and accessible to creators and builders worldwide. Every donation directly funds research, server infrastructure, and open AI development.
+            Your encouragement and patronage keep Furgal independent, helpful, and accessible. Every contribution directly supports ongoing development and improvements.
           </p>
           <div class="support-quote">
-            "Every groundbreaking innovation starts with a supportive community. Thank you for walking alongside us on this journey!"
+            "A supportive community makes all the difference. Thank you for walking alongside us on this journey!"
           </div>
         </div>
 
-        <!-- Bank & QR Donate Card -->
+        <!-- MB Bank VietQR Donate Card -->
         <div class="donate-card">
-          <!-- QR Code Image -->
+          <!-- Cropped Clean VietQR Card -->
           <div class="donate-qr-wrapper">
-            <img src="assets/qr_code.png" alt="Donate QR Code" />
+            <img src="assets/qr_code.png" alt="VietQR MB Bank - PHAM MINH TUAN" />
           </div>
 
           <!-- Bank Info Table -->
           <div class="bank-info-table">
             <div class="bank-row">
               <span class="bank-label">Bank Name</span>
-              <span class="bank-val">MB Bank (Military Bank)</span>
+              <span class="bank-val">MB (Military Bank)</span>
             </div>
             <div class="bank-row">
               <span class="bank-label">Account Number</span>
               <span class="bank-account-num">
-                <span>0973669611</span>
+                <span>67820107979</span>
                 <button type="button" class="copy-btn" id="copy-bank-btn" title="Copy account number">Copy</button>
               </span>
             </div>
             <div class="bank-row">
               <span class="bank-label">Account Holder</span>
-              <span class="bank-val">TUNA HEICHOU</span>
+              <span class="bank-val">PHAM MINH TUAN</span>
             </div>
             <div class="bank-row">
               <span class="bank-label">Transfer Memo</span>
-              <span class="bank-val" style="color: #00D2FF;">FURGAL DONATE</span>
+              <span class="bank-val" style="color: #0284C7;">FURGAL SUPPORT</span>
             </div>
           </div>
 
-          <p style="font-size: 0.85rem; color: var(--text-light);">
-            Scan with any banking app to donate instantly. Thank you!
+          <p style="font-size: 0.82rem; color: var(--text-muted);">
+            Scan with any Vietnamese banking app to support. Thank you!
           </p>
         </div>
       </div>
@@ -780,13 +747,13 @@
         <div class="footer-left">
           <div class="footer-social-row">
             <!-- 2 Facebook Icon-Only Buttons -->
-            <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile 1">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
-            <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile 2">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
@@ -823,18 +790,19 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <span>© 2026 Furgal AI. All rights reserved.</span>
-        <span>Built with Next-Gen Neural Performance</span>
+        <span>Dedicated Desktop AI Companion for Windows</span>
       </div>
     </div>
   </footer>
 
   <!-- ========================================================================
-       11. AUTH MODAL (Sign In & Sign Up)
+       11. AUTH MODAL (Sign In & Sign Up with Properly Proportioned Close Button)
        ======================================================================== -->
   <div class="auth-modal-overlay" id="auth-modal">
     <div class="auth-modal-card">
+      <!-- Well-proportioned Close Button -->
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
