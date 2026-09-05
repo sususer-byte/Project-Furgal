@@ -519,12 +519,12 @@ button, input, textarea, select {
   background: #0E1E38;
 }
 
-/* Dynamic Animated Fullscreen Background Image (Ken Burns Drift) */
+/* Fullscreen Crisp Hero Background Image (Optimized, Zero Zoom Thrashing) */
 .hero-image-bg-wrap {
   position: absolute;
-  inset: -4%;
-  width: 108%;
-  height: 108%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
@@ -535,9 +535,8 @@ button, input, textarea, select {
   height: 100%;
   object-fit: cover;
   object-position: center 18%;
-  animation: heroKenBurnsDrift 22s ease-in-out infinite alternate;
-  filter: brightness(1.02) contrast(1.02);
-  will-change: transform;
+  filter: brightness(1.01) contrast(1.02);
+  transform: translateZ(0);
 }
 
 .hero-bg-overlay {
@@ -548,18 +547,6 @@ button, input, textarea, select {
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 25, 47, 0.06) 100%);
   z-index: 2;
   pointer-events: none;
-}
-
-@keyframes heroKenBurnsDrift {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  50% {
-    transform: scale(1.045) translate(-1%, -0.8%);
-  }
-  100% {
-    transform: scale(1.02) translate(0.8%, -0.4%);
-  }
 }
 
 .hero-container {
@@ -662,21 +649,21 @@ button, input, textarea, select {
 }
 
 /* ==========================================================================
-   UNIFIED CONTINUOUS PAGE CANVAS (Seamless Flow & Intentional Dot Grid)
+   UNIFIED CONTINUOUS PAGE CANVAS (Ultra-Smooth, Sparse Light Dot Grid)
    ========================================================================== */
 .page-canvas-wrapper {
   position: relative;
   background-color: #F8FAFC;
-  /* Intentional small gray dot grid pattern on a 28px matrix + subtle ambient soft light */
+  /* Spacious 54px matrix with light, sparse dots + soft ambient glow */
   background-image: 
-    radial-gradient(rgba(100, 116, 139, 0.22) 1.25px, transparent 1.25px),
-    radial-gradient(circle at 10% 8%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 28%, rgba(59, 130, 246, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 14% 58%, rgba(0, 210, 255, 0.07) 0%, transparent 42%),
-    radial-gradient(circle at 86% 82%, rgba(30, 58, 138, 0.06) 0%, transparent 48%);
-  background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  background-attachment: fixed, scroll, scroll, scroll, scroll;
+    radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+    radial-gradient(circle at 10% 8%, rgba(0, 210, 255, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 28%, rgba(59, 130, 246, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 14% 58%, rgba(0, 210, 255, 0.05) 0%, transparent 42%),
+    radial-gradient(circle at 86% 82%, rgba(30, 58, 138, 0.04) 0%, transparent 48%);
+  background-size: 54px 54px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 /* Remove all harsh dividing lines & conflicting backgrounds across all sections */
@@ -717,9 +704,9 @@ button, input, textarea, select {
 
 /* Left: Liquid Glass Container Card with Elevated 3D Floating Feel */
 .about-text-card {
-  background: rgba(255, 255, 255, 0.76);
-  backdrop-filter: blur(24px) saturate(170%);
-  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: 30px;
   padding: 44px;
@@ -730,14 +717,15 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .about-text-card:hover {
-  transform: translateY(-6px) scale(1.008);
+  transform: translateY(-4px);
   box-shadow: 
-    0 32px 64px -14px rgba(14, 116, 144, 0.15),
-    0 14px 28px -6px rgba(15, 39, 68, 0.06),
+    0 28px 58px -12px rgba(14, 116, 144, 0.14),
+    0 12px 24px -6px rgba(15, 39, 68, 0.05),
     inset 0 1.5px 2px rgba(255, 255, 255, 1);
 }
 
@@ -814,9 +802,9 @@ button, input, textarea, select {
 /* Right: Glassmorphism translucent white card */
 .about-visual-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.76);
-  backdrop-filter: blur(24px) saturate(170%);
-  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-radius: 30px;
   padding: 44px;
   border: 1.5px solid rgba(255, 255, 255, 0.92);
@@ -827,14 +815,15 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .about-visual-card:hover {
-  transform: translateY(-6px) scale(1.008);
+  transform: translateY(-4px);
   box-shadow: 
-    0 32px 64px -14px rgba(14, 116, 144, 0.15),
-    0 14px 28px -6px rgba(15, 39, 68, 0.06),
+    0 28px 58px -12px rgba(14, 116, 144, 0.14),
+    0 12px 24px -6px rgba(15, 39, 68, 0.05),
     inset 0 1.5px 2px rgba(255, 255, 255, 1);
 }
 
@@ -909,9 +898,9 @@ button, input, textarea, select {
 }
 
 .feature-box {
-  background: rgba(255, 255, 255, 0.74);
-  backdrop-filter: blur(24px) saturate(170%);
-  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-radius: 28px;
   padding: 34px 28px;
   display: flex;
@@ -924,10 +913,10 @@ button, input, textarea, select {
     0 18px 40px -10px rgba(15, 39, 68, 0.07),
     0 8px 16px -6px rgba(15, 39, 68, 0.03),
     inset 0 1.5px 2px rgba(255, 255, 255, 0.95);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.3s ease, 
-              box-shadow 0.35s ease, 
-              filter 0.3s ease;
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.25s ease, 
+              box-shadow 0.3s ease;
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
@@ -960,7 +949,7 @@ button, input, textarea, select {
   inset: 2px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
   z-index: -1;
   transition: background 0.3s ease;
 }
@@ -972,17 +961,14 @@ button, input, textarea, select {
 }
 
 .features-grid:hover .feature-box {
-  opacity: 0.55;
-  transform: scale(0.98);
-  filter: blur(0.3px);
+  opacity: 0.65;
 }
 
 .features-grid .feature-box:hover {
   opacity: 1 !important;
-  transform: translateY(-8px) scale(1.02) !important;
-  filter: none !important;
+  transform: translateY(-5px) !important;
   z-index: 10;
-  box-shadow: 0 28px 60px -12px rgba(66, 133, 244, 0.28), 0 0 30px rgba(155, 114, 203, 0.2), inset 0 1.5px 2px #FFFFFF;
+  box-shadow: 0 24px 50px -12px rgba(66, 133, 244, 0.25), 0 0 25px rgba(155, 114, 203, 0.18), inset 0 1.5px 2px #FFFFFF;
 }
 
 .features-grid .feature-box:hover::before {
@@ -1041,8 +1027,8 @@ button, input, textarea, select {
 /* Deep Dive Card with Interactive Hover Elevation & Liquid Glass */
 .deep-dive-card {
   background: rgba(255, 255, 255, 0.76);
-  backdrop-filter: blur(24px) saturate(170%);
-  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-radius: 28px;
   padding: 40px 36px;
   border: 1.5px solid rgba(255, 255, 255, 0.92);
@@ -1053,15 +1039,16 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: default;
 }
 
 .deep-dive-card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-5px);
   border-color: rgba(0, 210, 255, 0.6);
-  box-shadow: 0 32px 64px -14px rgba(0, 210, 255, 0.22), 0 0 30px rgba(59, 130, 246, 0.15), inset 0 1.5px 2px #FFFFFF;
-  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 26px 55px -12px rgba(0, 210, 255, 0.2), 0 0 25px rgba(59, 130, 246, 0.12), inset 0 1.5px 2px #FFFFFF;
+  background: rgba(255, 255, 255, 0.94);
   z-index: 5;
 }
 
