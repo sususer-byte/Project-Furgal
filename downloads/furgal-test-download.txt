@@ -1,0 +1,23 @@
+﻿===============================================================
+               FURGAL AI ASSISTANT - v1.0.0
+===============================================================
+
+Thank you for downloading Furgal AI!
+
+This is a test download file configured for your website.
+
+To replace this with your actual installer/application:
+1. Build or export your application installer (.exe, .zip, .dmg, etc.).
+2. Copy your installer file into this folder:
+   d:\WebsiteDemo\TunaWebsite\downloads\
+3. Update the download link in index.html:
+   Change href="downloads/furgal-test-download.txt" 
+   to href="downloads/YOUR_INSTALLER_NAME.exe"
+   and update the download attribute if desired.
+
+===============================================================
+Support & Inquiries:
+- Email: robincleverlearn@gmail.com
+- Hotline: 0973669611
+- Facebook: https://www.facebook.com/tuna.heichou
+===============================================================

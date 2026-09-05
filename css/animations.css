@@ -1,0 +1,223 @@
+/* ==========================================================================
+   FURGAL AI - ANIMATIONS & NEON GLOW EFFECTS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   NEON BUTTONS - RUNNING NEON BORDER EFFECT
+   Any interactive button has a rounded pill shape with a running neon beam
+   -------------------------------------------------------------------------- */
+.btn-neon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 34px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+/* Primary Neon Button (Dark Navy fill with glowing Cyan/Blue neon trace) */
+.btn-neon-primary {
+  background: #0A192F;
+  color: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(10, 25, 47, 0.3), 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Neon Running Border Beam */
+.btn-neon-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 45deg,
+    #00D2FF 90deg,
+    #3B82F6 135deg,
+    transparent 180deg,
+    transparent 225deg,
+    #00D2FF 270deg,
+    #8B5CF6 315deg,
+    transparent 360deg
+  );
+  animation: rotateNeonBeam 4s linear infinite;
+  z-index: -2;
+}
+
+/* Inner Mask so only border shows the running neon */
+.btn-neon-primary::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #0A192F 0%, #0F2744 100%);
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.btn-neon-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px -5px rgba(10, 25, 47, 0.4), 
+              0 0 30px rgba(0, 210, 255, 0.65),
+              0 0 50px rgba(59, 130, 246, 0.4);
+  color: #FFFFFF;
+}
+
+.btn-neon-primary:hover::after {
+  background: linear-gradient(135deg, #0D223F 0%, #17365D 100%);
+}
+
+.btn-neon-primary:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Secondary / Light Neon Button */
+.btn-neon-secondary {
+  background: #FFFFFF;
+  color: var(--navy-deep);
+  box-shadow: 0 8px 20px -4px rgba(15, 39, 68, 0.1), 0 0 12px rgba(0, 210, 255, 0.25);
+}
+
+.btn-neon-secondary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent 0deg,
+    #00D2FF 90deg,
+    #3B82F6 180deg,
+    transparent 270deg,
+    #00D2FF 360deg
+  );
+  animation: rotateNeonBeam 4s linear infinite;
+  z-index: -2;
+}
+
+.btn-neon-secondary::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: var(--radius-full);
+  background: #FFFFFF;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.btn-neon-secondary:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #0284C7;
+  box-shadow: 0 12px 30px -5px rgba(15, 39, 68, 0.15), 
+              0 0 25px rgba(0, 210, 255, 0.5);
+}
+
+.btn-neon-secondary:hover::after {
+  background: #F8FAFC;
+}
+
+/* Compact Neon Button for Nav & Forms */
+.btn-neon-sm {
+  padding: 10px 22px;
+  font-size: 0.92rem;
+}
+
+.btn-neon-lg {
+  padding: 18px 42px;
+  font-size: 1.15rem;
+}
+
+/* Continuous Neon Rotation */
+@keyframes rotateNeonBeam {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   GEMINI-INSPIRED MULTI-COLOR RAINBOW BORDER EFFECT
+   Colors: Google Blue (#4285F4), Purple (#9B72CB), Coral (#D96570), 
+           Amber (#FF8A00), Cyan (#13B5EA)
+   -------------------------------------------------------------------------- */
+.gemini-rainbow-active {
+  position: relative;
+}
+
+@keyframes geminiGlowPulse {
+  0%, 100% {
+    box-shadow: 0 15px 40px -10px rgba(66, 133, 244, 0.35),
+                0 0 35px rgba(155, 114, 203, 0.3);
+  }
+  50% {
+    box-shadow: 0 20px 50px -10px rgba(217, 101, 112, 0.45),
+                0 0 45px rgba(19, 181, 234, 0.4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   GATE OVERLAY & PULSE ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes pulseNeonGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5), 0 0 40px rgba(59, 130, 246, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 210, 255, 0.8), 0 0 60px rgba(59, 130, 246, 0.45);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes floatAvatar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.gate-avatar-wrapper {
+  animation: floatAvatar 4s ease-in-out infinite;
+}
+
+/* Pulse hint for clicking */
+.pulse-hint {
+  animation: pulseHintText 1.8s infinite;
+}
+
+@keyframes pulseHintText {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); color: #00D2FF; }
+}
+
+/* Floating animation for decorative elements */
+.float-element {
+  animation: floatAnim 6s ease-in-out infinite;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+/* Neon Text Glow */
+.neon-glow-text {
+  text-shadow: 0 0 12px rgba(0, 210, 255, 0.7), 0 0 25px rgba(59, 130, 246, 0.4);
+}
