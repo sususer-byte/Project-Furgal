@@ -193,12 +193,15 @@
   <section class="about-section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-text-content">
-          <span class="section-badge">About Furgal</span>
-          <h3>A Practical AI Companion for Your Desktop</h3>
-          <p>
-            Furgal is developed as a supportive assistant to help you navigate everyday tasks, organize work items, and streamline routines. Built with a focus on simplicity and utility, Furgal acts as an accessible digital companion that works alongside you.
-          </p>
+        <!-- Left: Encapsulated Clean Container Card -->
+        <div class="about-text-card scroll-reveal">
+          <div>
+            <span class="section-badge">About Furgal</span>
+            <h3>A Practical AI Companion for Your Desktop</h3>
+            <p>
+              Furgal is developed as a supportive assistant to help you navigate everyday tasks, organize work items, and streamline routines. Built with a focus on simplicity and utility, Furgal acts as an accessible digital companion that works alongside you.
+            </p>
+          </div>
 
           <div class="about-pill-list">
             <div class="about-pill-item">
@@ -227,15 +230,17 @@
           </div>
         </div>
 
-        <!-- Grounded Principles Card -->
-        <div class="about-visual-card">
-          <span class="section-badge" style="background: rgba(255,255,255,0.1); color: #00D2FF; border-color: rgba(0,210,255,0.3);">
-            Design Focus
-          </span>
-          <h4 class="about-card-title">Companion Architecture</h4>
-          <p class="about-card-sub">
-            Built for transparent, reliable daily utility on Windows desktop environments.
-          </p>
+        <!-- Right: Glassmorphism Companion Architecture Card -->
+        <div class="about-visual-card scroll-reveal delay-1">
+          <div>
+            <span class="section-badge">
+              Design Focus
+            </span>
+            <h4 class="about-card-title">Companion Architecture</h4>
+            <p class="about-card-sub">
+              Built for transparent, reliable daily utility on Windows desktop environments.
+            </p>
+          </div>
 
           <div class="about-stat-row">
             <div class="about-stat-box">
@@ -383,7 +388,6 @@
         <!-- Deep Dive Card 1: Voice & Audio Dialogue -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 01</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
@@ -394,24 +398,24 @@
           </div>
           <h3 class="deep-dive-title">Fluid Voice & Audio Dialogue</h3>
           <p class="deep-dive-desc">
-            Furgal delivers conversational voice assistance engineered for hands-free productivity. Whether clarifying questions during work, brainstorming concepts, or dictating meeting summaries, voice interaction flows naturally with human-paced responsiveness and clear audio articulation.
+            Hands-free voice productivity with natural cadence, clear articulation, and zero rigid syntax commands.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Conversational voice interaction without memorizing rigid command syntax</span>
+              <span><strong>Natural Dialogue:</strong> Speak freely without memorizing rigid commands</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Natural conversational flow that accommodates thoughtful pauses and follow-up questions</span>
+              <span><strong>Flexible Pacing:</strong> Accommodates natural thinking pauses and follow-ups</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Hands-free desktop companion to query references while writing or editing</span>
+              <span><strong>Hands-Free Query:</strong> Look up documentation while actively typing or editing</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Supportive voice demeanor designed to provide comfortable, courteous assistance</span>
+              <span><strong>Courteous Demeanor:</strong> Supportive, respectful, and focused desktop companion</span>
             </li>
           </ul>
         </div>
@@ -419,7 +423,6 @@
         <!-- Deep Dive Card 2: Screen & Context Inspection -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 02</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect width="20" height="14" x="2" y="3" rx="2"></rect>
@@ -430,24 +433,24 @@
           </div>
           <h3 class="deep-dive-title">Screen Context & Visual Inspection</h3>
           <p class="deep-dive-desc">
-            Share active windows, code editors, or technical documents on your screen. Furgal inspects visual context with high accuracy to pinpoint layout issues, clarify charts, and review logs without visual generation clutter.
+            On-demand visual comprehension of active code editors, data tables, and application layouts.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>High-accuracy optical inspection of active code editors, logs, and spreadsheets</span>
+              <span><strong>OCR & Inspection:</strong> Reads code editor windows, terminal logs, and sheets</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Direct visual review for identifying syntax errors and UI layout alignment inconsistencies</span>
+              <span><strong>Layout Review:</strong> Spotlights formatting defects and UI alignment issues</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Dedicated focus on comprehension and text reading (image generation is not supported)</span>
+              <span><strong>Comprehension Only:</strong> Specialized in understanding (no image generation)</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Transparent visual inspection performed only on user demand with zero continuous recording</span>
+              <span><strong>User-Triggered:</strong> Operates strictly on demand with zero background captures</span>
             </li>
           </ul>
         </div>
@@ -455,7 +458,6 @@
         <!-- Deep Dive Card 3: Task & Routine Organization -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 03</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -465,24 +467,24 @@
           </div>
           <h3 class="deep-dive-title">Task & Workflow Organization</h3>
           <p class="deep-dive-desc">
-            Streamline repetitive daily routines with structured task management. Furgal breaks down complex goals into manageable steps, formats disorganized notes, and coordinates reminders so you can focus on core priorities.
+            Organizes ambiguous workflows into numbered checklists, clear Markdown notes, and timely reminders.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Automatic breakdown of ambiguous projects into actionable, numbered checklists</span>
+              <span><strong>Action Checklists:</strong> Breaks down complex goals into sequential steps</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Smart organization of scattered meeting notes, clipboard snippets, and reminders</span>
+              <span><strong>Note Formatting:</strong> Cleans up scattered meeting notes and clipboard text</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Structured formatting for Markdown summaries, tables, and daily to-do queues</span>
+              <span><strong>Structured Markdown:</strong> Formats summaries, tables, and daily to-do queues</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Gentle reminders and step tracking to help keep desktop workflows on schedule</span>
+              <span><strong>Gentle Pacing:</strong> Keeps daily desktop routines on track without stress</span>
             </li>
           </ul>
         </div>
@@ -490,7 +492,6 @@
         <!-- Deep Dive Card 4: Session Context Continuity -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 04</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -499,24 +500,24 @@
           </div>
           <h3 class="deep-dive-title">Session Context Continuity</h3>
           <p class="deep-dive-desc">
-            Furgal keeps track of active context throughout your current work session. Rather than starting from scratch with each query, Furgal connects past exchanges within the capacity of the active language model.
+            Maintains continuous context across active tasks within model capacity without cloud storage.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Retains active task references, code snippets, and active project notes throughout the session</span>
+              <span><strong>Active Memory:</strong> Retains active task files, snippets, and project context</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Contextual depth dynamically aligns with the active language model’s capacity window</span>
+              <span><strong>Model-Aligned:</strong> Dynamically adapts to the active LLM context window</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Zero third-party storage: working session context resides strictly in local application memory</span>
+              <span><strong>Local Storage:</strong> Working session memory stays strictly in system RAM</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Instant one-click context clearing whenever you wish to start a fresh topic</span>
+              <span><strong>Instant Reset:</strong> Clear context instantly with one click for fresh topics</span>
             </li>
           </ul>
         </div>
@@ -524,7 +525,6 @@
         <!-- Deep Dive Card 5: Code Assistance & Syntax Review -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 05</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="16 18 22 12 16 6"></polyline>
@@ -534,24 +534,24 @@
           </div>
           <h3 class="deep-dive-title">Code Assistance & Syntax Review</h3>
           <p class="deep-dive-desc">
-            A reliable pair companion for developers, students, and engineers. Furgal reviews source code across common languages, clarifies cryptic error tracebacks, drafts boilerplate, and formats documentation right on your desktop.
+            Pair programming helper for reviewing syntax, clarifying stack traces, and formatting docs.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Broad language support covering Python, JavaScript, TypeScript, C++, Rust, and SQL</span>
+              <span><strong>Multi-Language:</strong> Python, TypeScript, JavaScript, C++, Rust, and SQL</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Step-by-step clarification of cryptic compiler errors and runtime stack trace exceptions</span>
+              <span><strong>Traceback Clarity:</strong> Clarifies cryptic compiler errors and runtime exceptions</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Assistance drafting boilerplate functions, regular expressions, and unit test templates</span>
+              <span><strong>Boilerplate Drafting:</strong> Assists with regex, test templates, and helpers</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Helpful guidance on writing clean comments, README structures, and inline docstrings</span>
+              <span><strong>Clean Docs:</strong> Formats inline comments, docstrings, and README structures</span>
             </li>
           </ul>
         </div>
@@ -559,7 +559,6 @@
         <!-- Deep Dive Card 6: Desktop Extensibility & Maximum Privacy -->
         <div class="deep-dive-card">
           <div class="deep-dive-header">
-            <span class="deep-dive-step">Feature 06</span>
             <div class="deep-dive-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
@@ -569,24 +568,24 @@
           </div>
           <h3 class="deep-dive-title">Desktop Extensibility & Maximum Privacy</h3>
           <p class="deep-dive-desc">
-            Engineered from the ground up as a native Windows desktop companion with strict privacy boundaries. Sensitive interactions stay on your computer, with customizable Markdown instructions that let you tailor behavior safely.
+            Local-first Windows companion with strict privacy boundaries and extensible Markdown skills.
           </p>
           <ul class="deep-dive-bullets">
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Maximum Privacy design: personal documents and chat logs remain on your local computer</span>
+              <span><strong>Maximum Privacy:</strong> Documents and logs remain confidential on your PC</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Zero data harvesting or hidden background training on your personal workspace files</span>
+              <span><strong>No Harvesting:</strong> Zero background data collection or AI model retraining</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Custom workflow expansion via straightforward Markdown prompt and skill definitions</span>
+              <span><strong>Custom Skills:</strong> Expand features via straightforward Markdown prompt files</span>
             </li>
             <li class="deep-dive-bullet-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Dedicated Windows system tray integration with minimal CPU and memory overhead</span>
+              <span><strong>System Native:</strong> Lightweight Windows tray app with minimal CPU overhead</span>
             </li>
           </ul>
         </div>
@@ -606,11 +605,11 @@
           Official desktop release built specifically for Windows.
         </p>
 
-        <!-- Live Download Stats Badge -->
+        <!-- Verified Real Download Stats Badge -->
         <div class="download-stats-badge">
           <span class="live-dot"></span>
-          <span class="stats-count" id="download-counter">15,480+</span>
-          <span class="stats-label">Active Windows Downloads</span>
+          <span class="stats-count" id="download-counter">1,248</span>
+          <span class="stats-label">Verified Windows Downloads</span>
         </div>
 
         <!-- Windows Only Platform Card -->
@@ -811,12 +810,16 @@
        ======================================================================== -->
   <div class="auth-modal-overlay" id="auth-modal">
     <div class="auth-modal-card">
-      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+      <!-- Dedicated Top Bar with Title and Close Button (Generous Spacing) -->
+      <div class="auth-modal-top-bar">
+        <h3 class="auth-modal-title">Account Access</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
       <!-- Mode Switcher Tabs -->
       <div class="auth-tabs">

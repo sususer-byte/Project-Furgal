@@ -3,112 +3,123 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   NEON BUTTONS - RUNNING NEON BORDER EFFECT
-   Clean pill shape with controlled border-beam and glowing highlights
+   NEON BUTTONS - RUNNING BORDER BEAM EFFECT
+   Continuous animated gradient light running smoothly around the pill perimeter
    -------------------------------------------------------------------------- */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotateBorderBeam {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
 .btn-neon {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 13px 30px;
+  padding: 14px 32px;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   z-index: 1;
-  overflow: hidden;
-  isolation: isolate;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
-  border: none;
-  outline: none;
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              background 0.25s ease;
+  overflow: hidden;
 }
 
-/* Primary Neon Button */
+/* Primary Neon Button with Running Border Beam */
 .btn-neon-primary {
-  background: #0A192F;
-  color: #FFFFFF;
-  box-shadow: 0 8px 20px -4px rgba(10, 25, 47, 0.25), 0 0 15px rgba(0, 210, 255, 0.3);
-}
-
-.btn-neon-primary::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    transparent 0deg,
-    transparent 60deg,
-    #00D2FF 120deg,
-    #3B82F6 180deg,
-    transparent 240deg,
-    #00D2FF 300deg,
-    transparent 360deg
-  );
-  animation: rotateNeonBeam 4s linear infinite;
-  z-index: -2;
-}
-
-.btn-neon-primary::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #0A192F 0%, #0F2744 100%);
-  z-index: -1;
-  transition: background 0.25s ease;
+  color: #FFFFFF !important;
+  background: 
+    linear-gradient(#0A192F, #0F2744) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      transparent 0%,
+      transparent 45%,
+      #00D2FF 72%,
+      #3B82F6 88%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  animation: rotateBorderBeam 3.2s linear infinite;
+  box-shadow: 0 8px 24px -4px rgba(10, 25, 47, 0.35), 0 0 16px rgba(0, 210, 255, 0.35);
 }
 
 .btn-neon-primary:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 28px -4px rgba(10, 25, 47, 0.35), 
-              0 0 25px rgba(0, 210, 255, 0.55);
-  color: #FFFFFF;
-}
-
-.btn-neon-primary:hover::after {
-  background: linear-gradient(135deg, #0E2442 0%, #16365C 100%);
+  box-shadow: 0 12px 28px -4px rgba(10, 25, 47, 0.45), 
+              0 0 28px rgba(0, 210, 255, 0.65);
+  animation-duration: 1.6s; /* Running beam speeds up on hover */
 }
 
 .btn-neon-primary:active {
   transform: translateY(1px) scale(0.98);
 }
 
-/* Secondary Button - Clean styling without rogue overflow */
+/* Secondary Button with Subtle Running Border */
 .btn-neon-secondary {
-  background: rgba(255, 255, 255, 0.95);
   color: var(--navy-deep);
-  border: 1px solid rgba(15, 39, 68, 0.12);
-  box-shadow: 0 4px 12px rgba(15, 39, 68, 0.06);
-  overflow: hidden;
-  position: relative;
-  isolation: isolate;
+  background: 
+    linear-gradient(#FFFFFF, #F0F7FF) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      transparent 0%,
+      transparent 50%,
+      #00D2FF 80%,
+      #0284C7 95%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  animation: rotateBorderBeam 4s linear infinite;
+  box-shadow: 0 4px 14px rgba(15, 39, 68, 0.08);
 }
 
 .btn-neon-secondary:hover {
-  border-color: #00D2FF;
   color: #0284C7;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 210, 255, 0.25);
-  background: #FFFFFF;
+  box-shadow: 0 8px 22px rgba(0, 210, 255, 0.3);
+  animation-duration: 2s;
 }
 
 .btn-neon-lg {
   padding: 16px 38px;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
 }
 
-@keyframes rotateNeonBeam {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --------------------------------------------------------------------------
+   SCROLL-TRIGGERED FADE-IN-UP ANIMATION
+   Smoothly glides sections and cards into place as user scrolls
+   -------------------------------------------------------------------------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.delay-1 {
+  transition-delay: 0.15s;
+}
+
+.scroll-reveal.delay-2 {
+  transition-delay: 0.3s;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------------
