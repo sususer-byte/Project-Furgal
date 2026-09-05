@@ -477,29 +477,46 @@ function showToast(message, type = 'info') {
 }
 
 /* ==========================================================================
-   13. SCROLL-TRIGGERED FADE-IN-UP REVEAL
-   Uses IntersectionObserver to smoothly glide cards into view
+   13. SLIDE-LIKE SCROLL ENTRANCE & CARD REVEAL
+   Uses IntersectionObserver to push up sections like slides and reveal cards
    ========================================================================== */
 function initScrollReveal() {
+  const slideSections = document.querySelectorAll('.slide-section');
   const revealElements = document.querySelectorAll('.scroll-reveal');
-  if (!revealElements.length) return;
 
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
+    // 1. Slide-like Section Entrance Observer
+    const slideObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
+          entry.target.classList.add('slide-active');
+          slideObserver.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15,
+      threshold: 0.08,
       rootMargin: '0px 0px -40px 0px'
     });
 
-    revealElements.forEach(el => observer.observe(el));
+    slideSections.forEach(section => slideObserver.observe(section));
+
+    // 2. Individual Card Reveal Observer
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    revealElements.forEach(el => cardObserver.observe(el));
   } else {
     // Fallback if IntersectionObserver is unsupported
+    slideSections.forEach(el => el.classList.add('slide-active'));
     revealElements.forEach(el => el.classList.add('revealed'));
   }
 }

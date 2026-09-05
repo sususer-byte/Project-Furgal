@@ -98,6 +98,39 @@
 }
 
 /* --------------------------------------------------------------------------
+   SLIDE-LIKE SECTION ENTRANCE (Presentation Slide Push-Up)
+   Keeps sections hidden until reached, then smoothly slides/pushes up
+   -------------------------------------------------------------------------- */
+.slide-section {
+  opacity: 0;
+  transform: translateY(60px) scale(0.985);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.slide-section.slide-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered container entrance within active slide */
+.slide-section.slide-active .container {
+  animation: slideContentPushUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slideContentPushUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
    SCROLL-TRIGGERED FADE-IN-UP ANIMATION
    Smoothly glides sections and cards into place as user scrolls
    -------------------------------------------------------------------------- */

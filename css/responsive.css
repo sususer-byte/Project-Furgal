@@ -127,6 +127,7 @@
     min-height: auto;
   }
 
+  .hero-image-bg,
   .hero-video-bg {
     object-position: 72% 15%;
   }

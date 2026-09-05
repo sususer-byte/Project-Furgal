@@ -149,11 +149,11 @@
        3. HERO SECTION (Untinted 1080p Video - Fit to avoid pixel stretch)
        ======================================================================== -->
   <section class="hero-section" id="hero">
-    <!-- Pure 1080p Full HD Video Background - Scaled to preserve HD crispness -->
-    <video class="hero-video-bg" id="hero-video" autoplay loop muted playsinline>
-      <source src="videos/Background.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <!-- Dynamic Animated Fullscreen Background Image (Pure Crisp Anime Scene, Zero Watermark) -->
+    <div class="hero-image-bg-wrap">
+      <img src="Background.png" alt="Furgal AI Companion Background" class="hero-image-bg" />
+      <div class="hero-bg-overlay"></div>
+    </div>
 
     <div class="container hero-container">
       <div class="hero-glass-card">
@@ -188,9 +188,14 @@
   </section>
 
   <!-- ========================================================================
-       4. ABOUT / INTRODUCTION SECTION
+       UNIFIED CONTINUOUS PAGE CANVAS (Seamless Flow & Intentional Dot Grid)
        ======================================================================== -->
-  <section class="about-section" id="about">
+  <main class="page-canvas-wrapper" id="main-content">
+
+    <!-- ========================================================================
+         4. ABOUT / INTRODUCTION SECTION
+         ======================================================================== -->
+    <section class="about-section slide-section" id="about">
     <div class="container">
       <div class="about-grid">
         <!-- Left: Encapsulated Clean Container Card -->
@@ -268,7 +273,7 @@
   <!-- ========================================================================
        5. FEATURES OVERVIEW (6 Square Cards + Gemini Rainbow Effect)
        ======================================================================== -->
-  <section class="features-section" id="features">
+  <section class="features-section slide-section" id="features">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Core Focus Areas</span>
@@ -374,7 +379,7 @@
   <!-- ========================================================================
        6. DEEP DIVE SECTION (No Videos - Rich Informative Cards with Hover Highlight)
        ======================================================================== -->
-  <section class="detailed-features-section" id="detailed-features">
+  <section class="detailed-features-section slide-section" id="detailed-features">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Deep Dive</span>
@@ -596,7 +601,7 @@
   <!-- ========================================================================
        7. DOWNLOAD SECTION (Windows Only with Live Download Counter)
        ======================================================================== -->
-  <section class="download-section" id="download">
+  <section class="download-section slide-section" id="download">
     <div class="container">
       <div class="download-box">
         <span class="section-badge">Get Started</span>
@@ -644,7 +649,7 @@
   <!-- ========================================================================
        8. CONTACT US SECTION
        ======================================================================== -->
-  <section class="contact-section" id="contact">
+  <section class="contact-section slide-section" id="contact">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Get in Touch</span>
@@ -700,7 +705,7 @@
   <!-- ========================================================================
        9. THANK YOU & SUPPORT / DONATE SECTION (MB Bank VietQR)
        ======================================================================== -->
-  <section class="support-section" id="support">
+  <section class="support-section slide-section" id="support">
     <div class="container">
       <div class="support-container">
         <!-- Message & Appreciation -->
@@ -751,6 +756,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ========================================================================
        10. FOOTER (1 Single Facebook Button)
