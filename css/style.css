@@ -717,6 +717,7 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 36px;
   transform: translateZ(0);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
@@ -739,11 +740,13 @@ button, input, textarea, select {
   letter-spacing: -0.01em;
 }
 
+.about-text-card .about-desc,
+.about-text-card > div > p,
 .about-text-card > p {
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.75;
-  margin-bottom: 34px;
+  margin-bottom: 0;
 }
 
 .about-pill-list {
