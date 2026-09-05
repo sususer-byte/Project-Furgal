@@ -1,7 +1,8 @@
 /**
  * FURGAL AI - Interactive Frontend Controller
  * Complete interactive logic for gate loading, account modal, navigation, 
- * copy functions, form mailer, and neon visual animations.
+ * copy functions, form mailer, download counter, and neon visual animations.
+ * 100% English interface.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,10 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initLoadingGate();
   initNavbar();
+  initScrollDownButton();
   initAccountDropdown();
   initAuthModal();
   initContactForm();
   initDownloadButtons();
+  initDownloadCounter();
   initCopyBankButton();
   initFeaturesHover();
   initVideoPlayback();
@@ -21,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. LOADING GATE LOGIC (nham_mat -> mo_mat -> Click to Enter)
+   1. LOADING GATE LOGIC (Transparent Chibi nham_mat -> mo_mat -> Click to Enter)
    ========================================================================== */
 function initLoadingGate() {
   const gateOverlay = document.getElementById('gate-overlay');
@@ -37,7 +40,7 @@ function initLoadingGate() {
     { threshold: 30, text: 'Loading Furgal companion core...' },
     { threshold: 65, text: 'Preparing desktop interface...' },
     { threshold: 85, text: 'Connecting local modules...' },
-    { threshold: 100, text: 'Furgal is ready! Click to enter.' }
+    { threshold: 100, text: 'Furgal is ready! Click anywhere to begin.' }
   ];
 
   const interval = setInterval(() => {
@@ -58,7 +61,7 @@ function initLoadingGate() {
       setTimeout(() => {
         gateCard.classList.add('gate-ready');
         statusText.classList.add('pulse-hint');
-      }, 300);
+      }, 250);
     }
   }, 90);
 
@@ -87,11 +90,6 @@ function initLoadingGate() {
       heroVideo.play().catch(() => {});
     }
 
-    // Play all visible feature videos
-    document.querySelectorAll('.zigzag-media-wrapper video').forEach(v => {
-      v.play().catch(() => {});
-    });
-
     showToast('✨ Welcome to Furgal AI! Your supportive desktop companion.');
   };
 
@@ -99,7 +97,7 @@ function initLoadingGate() {
 }
 
 /* ==========================================================================
-   2. NAVBAR & SMOOTH SCROLL
+   2. NAVBAR & SCROLL BEHAVIOR
    ========================================================================== */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
@@ -120,7 +118,7 @@ function initNavbar() {
       const targetElem = document.querySelector(targetId);
       if (targetElem) {
         e.preventDefault();
-        const navHeight = navbar ? navbar.offsetHeight + 20 : 80;
+        const navHeight = navbar ? navbar.offsetHeight + 24 : 80;
         const targetPos = targetElem.getBoundingClientRect().top + window.pageYOffset - navHeight;
         window.scrollTo({
           top: targetPos,
@@ -138,7 +136,29 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   3. ACCOUNT DROPDOWN WITH ROTATING ARROW
+   3. FUNCTIONAL SCROLL DOWN BUTTON
+   ========================================================================== */
+function initScrollDownButton() {
+  const scrollBtn = document.getElementById('hero-scroll-hint');
+  if (!scrollBtn) return;
+
+  scrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const navbar = document.getElementById('navbar');
+      const navHeight = navbar ? navbar.offsetHeight + 24 : 80;
+      const targetPos = aboutSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      window.scrollTo({
+        top: targetPos,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
+
+/* ==========================================================================
+   4. ACCOUNT DROPDOWN WITH ROTATING ARROW
    ========================================================================== */
 function initAccountDropdown() {
   const accountWrapper = document.getElementById('account-dropdown-wrapper');
@@ -160,7 +180,7 @@ function initAccountDropdown() {
 }
 
 /* ==========================================================================
-   4. AUTH MODAL (Sign In & Sign Up)
+   5. AUTH MODAL (Sign In & Sign Up)
    ========================================================================== */
 function initAuthModal() {
   const modal = document.getElementById('auth-modal');
@@ -224,7 +244,7 @@ function initAuthModal() {
     }
   });
 
-  // Handle Form Submissions (UI Preview Mode)
+  // Handle Form Submissions (100% English UI Preview Mode)
   const formSignIn = document.getElementById('form-signin');
   if (formSignIn) {
     formSignIn.addEventListener('submit', (e) => {
@@ -234,7 +254,7 @@ function initAuthModal() {
         showToast('⚠️ Please enter your email or username.', 'warn');
         return;
       }
-      showToast(`🔑 Preview Mode: Authenticated as "${loginId}". Backend integration ready soon!`);
+      showToast(`🔑 Preview Mode: Authenticated as "${loginId}". Backend integration active soon!`);
       closeModal();
     });
   }
@@ -247,6 +267,11 @@ function initAuthModal() {
       const pass = document.getElementById('signup-password').value;
       const passConfirm = document.getElementById('signup-password-confirm').value;
 
+      if (!user) {
+        showToast('⚠️ Please choose a username.', 'warn');
+        return;
+      }
+
       if (pass !== passConfirm) {
         showToast('⚠️ Passwords do not match. Please verify.', 'warn');
         return;
@@ -258,7 +283,7 @@ function initAuthModal() {
 }
 
 /* ==========================================================================
-   5. CONTACT US FORM
+   6. CONTACT US FORM
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -291,19 +316,32 @@ function initContactForm() {
 }
 
 /* ==========================================================================
-   6. DOWNLOAD BUTTONS
+   7. DOWNLOAD BUTTONS & COUNTER
    ========================================================================== */
 function initDownloadButtons() {
   const downloadBtns = document.querySelectorAll('.btn-download-action');
   downloadBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      showToast('📥 Downloading Furgal test installer for Windows...');
+      showToast('📥 Downloading Furgal installer test file for Windows...');
     });
   });
 }
 
+function initDownloadCounter() {
+  const counterElem = document.getElementById('download-counter');
+  if (!counterElem) return;
+
+  let currentCount = 15480;
+  setInterval(() => {
+    if (Math.random() > 0.6) {
+      currentCount += Math.floor(Math.random() * 3) + 1;
+      counterElem.textContent = `${currentCount.toLocaleString()}+`;
+    }
+  }, 4000);
+}
+
 /* ==========================================================================
-   7. COPY BANK ACCOUNT BUTTON
+   8. COPY BANK ACCOUNT BUTTON
    ========================================================================== */
 function initCopyBankButton() {
   const copyBtn = document.getElementById('copy-bank-btn');
@@ -330,7 +368,7 @@ function initCopyBankButton() {
 }
 
 /* ==========================================================================
-   8. GEMINI RAINBOW BORDER EFFECT & FEATURE HOVER
+   9. GEMINI RAINBOW BORDER EFFECT & FEATURE HOVER
    ========================================================================== */
 function initFeaturesHover() {
   const cards = document.querySelectorAll('.feature-box');
@@ -345,34 +383,19 @@ function initFeaturesHover() {
 }
 
 /* ==========================================================================
-   9. VIDEO PLAYBACK CONTROL
+   10. VIDEO PLAYBACK CONTROL
    ========================================================================== */
 function initVideoPlayback() {
-  const videos = document.querySelectorAll('video');
-  videos.forEach(v => {
-    v.muted = true;
-    v.playsInline = true;
-    v.loop = true;
-  });
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    }, { threshold: 0.25 });
-
-    videos.forEach(v => observer.observe(v));
+  const heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.playsInline = true;
+    heroVideo.loop = true;
   }
 }
 
 /* ==========================================================================
-   10. MOBILE MENU TOGGLE
+   11. MOBILE MENU TOGGLE
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-toggle-btn');
@@ -386,7 +409,7 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   11. TOAST NOTIFICATION UTILITY
+   12. TOAST NOTIFICATION UTILITY (100% English)
    ========================================================================== */
 function showToast(message, type = 'info') {
   let container = document.getElementById('toast-container');

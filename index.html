@@ -6,8 +6,16 @@
   <title>Furgal - Supportive Desktop AI Companion</title>
   <meta name="description" content="Furgal AI is an accessible, supportive desktop AI companion designed to assist you with daily digital tasks, organize workflows, and respect your privacy on Windows." />
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <!-- Transparent Circular Favicon (No Black Border) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.png" />
+
+  <!-- Vercel Web Analytics & Speed Insights -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
@@ -17,14 +25,14 @@
 <body>
 
   <!-- ========================================================================
-       1. INTERACTIVE CHIBI LOADING GATE (nham_mat -> mo_mat -> Click to Enter)
+       1. INTERACTIVE CHIBI LOADING GATE (Transparent Chibi - No Circle Border)
        ======================================================================== -->
   <div id="gate-overlay">
     <div class="gate-card" id="gate-card">
       <div class="gate-avatar-wrapper">
         <div class="gate-avatar-inner">
-          <img src="assets/nham_mat.jpg" alt="Furgal Chibi Sleeping" id="gate-img-nham" />
-          <img src="assets/mo_mat.jpg" alt="Furgal Chibi Awake" id="gate-img-mo" />
+          <img src="assets/nham_mat.png" alt="Furgal Chibi Sleeping" id="gate-img-nham" />
+          <img src="assets/mo_mat.png" alt="Furgal Chibi Awake" id="gate-img-mo" />
         </div>
       </div>
       <h2 class="gate-title">Furgal AI</h2>
@@ -56,7 +64,7 @@
       <!-- Left: Logo + Furgal Name -->
       <a href="#" class="nav-brand">
         <div class="brand-logo-wrap">
-          <img src="assets/logo.jpg" alt="Furgal Logo" />
+          <img src="assets/logo.png" alt="Furgal Logo" />
         </div>
         <span class="brand-name">Furgal</span>
       </a>
@@ -138,30 +146,26 @@
   </header>
 
   <!-- ========================================================================
-       3. HERO SECTION (Untinted 1080p Full HD Video Background)
+       3. HERO SECTION (Untinted 1080p Video - Fit to avoid pixel stretch)
        ======================================================================== -->
   <section class="hero-section" id="hero">
-    <!-- Pure 1080p Full HD Video Background - No Blue Overlay -->
+    <!-- Pure 1080p Full HD Video Background - Scaled to preserve HD crispness -->
     <video class="hero-video-bg" id="hero-video" autoplay loop muted playsinline>
       <source src="videos/Background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
     <div class="container hero-container">
-      <!-- Translucent Glass Card preserves video colors while ensuring comfortable text contrast -->
       <div class="hero-glass-card">
-        <!-- Headline: Well-spaced, not squished -->
         <h1 class="hero-title">
           Furgal AI
           <span class="title-accent">Assistant</span>
         </h1>
 
-        <!-- Grounded Formal Description -->
         <p class="hero-desc">
           A dedicated AI companion designed to assist you in managing daily digital tasks, organizing workflows, and providing supportive pair assistance.
         </p>
 
-        <!-- CTA Action: Download for Windows -->
         <div class="hero-actions">
           <a href="#download" class="btn-neon btn-neon-primary btn-neon-lg">
             <span>Download for Windows</span>
@@ -174,17 +178,17 @@
       </div>
     </div>
 
-    <!-- Scroll Down Hint -->
-    <div class="hero-scroll-hint">
+    <!-- Functional Interactive Scroll Down Button -->
+    <a href="#about" class="hero-scroll-hint" id="hero-scroll-hint" aria-label="Scroll down to about section">
       <span>Scroll Down</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="m6 9 6 6 6-6"></path>
       </svg>
-    </div>
+    </a>
   </section>
 
   <!-- ========================================================================
-       4. ABOUT / INTRODUCTION SECTION (Formal, Grounded & Practical)
+       4. ABOUT / INTRODUCTION SECTION
        ======================================================================== -->
   <section class="about-section" id="about">
     <div class="container">
@@ -223,7 +227,7 @@
           </div>
         </div>
 
-        <!-- Grounded Principles Card (Real, Honest Attributes) -->
+        <!-- Grounded Principles Card -->
         <div class="about-visual-card">
           <span class="section-badge" style="background: rgba(255,255,255,0.1); color: #00D2FF; border-color: rgba(0,210,255,0.3);">
             Design Focus
@@ -269,7 +273,6 @@
         </p>
       </div>
 
-      <!-- 6 Square Boxes with Keywords -->
       <div class="features-grid">
         <!-- Feature 1 -->
         <div class="feature-box">
@@ -364,228 +367,235 @@
   </section>
 
   <!-- ========================================================================
-       6. DETAILED FEATURES (6 Zig-Zag Showcases with "Bản demo" badge)
+       6. DEEP DIVE SECTION (No Videos - Rich Informative Cards with Hover Highlight)
        ======================================================================== -->
   <section class="detailed-features-section" id="detailed-features">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Deep Dive</span>
-        <h2 class="section-title">Explore Furgal In Action</h2>
+        <h2 class="section-title">Comprehensive Capability Overview</h2>
         <p class="section-desc">
-          A closer look at how Furgal assists with your daily computing and creative tasks.
+          Hover over any card below to highlight detailed breakdowns of Furgal’s core features and desktop utility.
         </p>
       </div>
 
-      <div class="zigzag-list">
-        <!-- Item 1: Text LEFT, Video RIGHT -->
-        <div class="zigzag-item">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 01</span>
-            <h3 class="zigzag-title">Fluid Voice & Audio Dialogue</h3>
-            <p class="zigzag-desc">
-              Engage in natural, interactive voice dialogue with clear audio pacing and a supportive companion tone.
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Responsive conversational voice dialogue</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Natural conversational flow for task clarification</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Supportive voice interaction for hands-free queries</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_1.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+      <div class="deep-dive-grid">
+        <!-- Deep Dive Card 1: Voice & Audio Dialogue -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 01</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Fluid Voice & Audio Dialogue</h3>
+          <p class="deep-dive-desc">
+            Furgal delivers conversational voice assistance engineered for hands-free productivity. Whether clarifying questions during work, brainstorming concepts, or dictating meeting summaries, voice interaction flows naturally with human-paced responsiveness and clear audio articulation.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Conversational voice interaction without memorizing rigid command syntax</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Natural conversational flow that accommodates thoughtful pauses and follow-up questions</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Hands-free desktop companion to query references while writing or editing</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Supportive voice demeanor designed to provide comfortable, courteous assistance</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Item 2: Video LEFT, Text RIGHT (Reverse) -->
-        <div class="zigzag-item reverse">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 02</span>
-            <h3 class="zigzag-title">Screen & Context Inspection</h3>
-            <p class="zigzag-desc">
-              Share your screen, documents, or code editors. Furgal inspects visual context with high accuracy to assist with explanations and guidance (image generation is not supported).
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>High accuracy visual screen and document review</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Assists with understanding diagrams, code, and text</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Note: Furgal focuses on comprehension and does not generate images</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_2.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+        <!-- Deep Dive Card 2: Screen & Context Inspection -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 02</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Screen Context & Visual Inspection</h3>
+          <p class="deep-dive-desc">
+            Share active windows, code editors, or technical documents on your screen. Furgal inspects visual context with high accuracy to pinpoint layout issues, clarify charts, and review logs without visual generation clutter.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>High-accuracy optical inspection of active code editors, logs, and spreadsheets</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct visual review for identifying syntax errors and UI layout alignment inconsistencies</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated focus on comprehension and text reading (image generation is not supported)</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Transparent visual inspection performed only on user demand with zero continuous recording</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Item 3: Text LEFT, Video RIGHT -->
-        <div class="zigzag-item">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 03</span>
-            <h3 class="zigzag-title">Task & Routine Organization</h3>
-            <p class="zigzag-desc">
-              Delegate routine task structuring, note consolidation, and daily scheduling to keep your workspace uncluttered.
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Step-by-step task breakdown and checklists</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Notes and document formatting support</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Helpful reminders and schedule organizing</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_3.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+        <!-- Deep Dive Card 3: Task & Routine Organization -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 03</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Task & Workflow Organization</h3>
+          <p class="deep-dive-desc">
+            Streamline repetitive daily routines with structured task management. Furgal breaks down complex goals into manageable steps, formats disorganized notes, and coordinates reminders so you can focus on core priorities.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Automatic breakdown of ambiguous projects into actionable, numbered checklists</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Smart organization of scattered meeting notes, clipboard snippets, and reminders</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Structured formatting for Markdown summaries, tables, and daily to-do queues</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Gentle reminders and step tracking to help keep desktop workflows on schedule</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Item 4: Video LEFT, Text RIGHT (Reverse) -->
-        <div class="zigzag-item reverse">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 04</span>
-            <h3 class="zigzag-title">Session Context Continuity</h3>
-            <p class="zigzag-desc">
-              Keeps track of your ongoing task focus throughout the active session, adapting contextually as your work progresses.
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Active session memory for ongoing tasks and notes</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Contextual recall based on the underlying language model</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Simple user control to reset session context at any time</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_4.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+        <!-- Deep Dive Card 4: Session Context Continuity -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 04</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Session Context Continuity</h3>
+          <p class="deep-dive-desc">
+            Furgal keeps track of active context throughout your current work session. Rather than starting from scratch with each query, Furgal connects past exchanges within the capacity of the active language model.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Retains active task references, code snippets, and active project notes throughout the session</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Contextual depth dynamically aligns with the active language model’s capacity window</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero third-party storage: working session context resides strictly in local application memory</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant one-click context clearing whenever you wish to start a fresh topic</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Item 5: Text LEFT, Video RIGHT -->
-        <div class="zigzag-item">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 05</span>
-            <h3 class="zigzag-title">Code Assistance & Syntax Clarification</h3>
-            <p class="zigzag-desc">
-              A helpful pair companion for coding tasks. Furgal helps draft boilerplate, review syntax, and explain code blocks.
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Multi-language syntax support (Python, JS, C++, etc.)</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Explains error logs and suggests step-by-step fixes</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Helps write clear comments and code documentation</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_5.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+        <!-- Deep Dive Card 5: Code Assistance & Syntax Review -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 05</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Code Assistance & Syntax Review</h3>
+          <p class="deep-dive-desc">
+            A reliable pair companion for developers, students, and engineers. Furgal reviews source code across common languages, clarifies cryptic error tracebacks, drafts boilerplate, and formats documentation right on your desktop.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Broad language support covering Python, JavaScript, TypeScript, C++, Rust, and SQL</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Step-by-step clarification of cryptic compiler errors and runtime stack trace exceptions</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Assistance drafting boilerplate functions, regular expressions, and unit test templates</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Helpful guidance on writing clean comments, README structures, and inline docstrings</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Item 6: Video LEFT, Text RIGHT (Reverse) -->
-        <div class="zigzag-item reverse">
-          <div class="zigzag-info">
-            <span class="zigzag-step-num">Feature 06</span>
-            <h3 class="zigzag-title">Extensibility & Command Integration</h3>
-            <p class="zigzag-desc">
-              Connects with your everyday desktop tools and command line through customizable Markdown prompts and skill definitions.
-            </p>
-            <ul class="zigzag-checklist">
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Extensible with custom prompts and workflow skills</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Safe command interaction with explicit user confirmation</span>
-              </li>
-              <li class="zigzag-check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Seamless support for desktop notes and task management</span>
-              </li>
-            </ul>
-          </div>
-          <div class="zigzag-media-wrapper">
-            <video autoplay loop muted playsinline>
-              <source src="videos/feature_6.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-overlay">
-              <span class="video-status-dot"></span>
-              <span>Bản demo</span>
+        <!-- Deep Dive Card 6: Desktop Extensibility & Maximum Privacy -->
+        <div class="deep-dive-card">
+          <div class="deep-dive-header">
+            <span class="deep-dive-step">Feature 06</span>
+            <div class="deep-dive-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
             </div>
           </div>
+          <h3 class="deep-dive-title">Desktop Extensibility & Maximum Privacy</h3>
+          <p class="deep-dive-desc">
+            Engineered from the ground up as a native Windows desktop companion with strict privacy boundaries. Sensitive interactions stay on your computer, with customizable Markdown instructions that let you tailor behavior safely.
+          </p>
+          <ul class="deep-dive-bullets">
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Maximum Privacy design: personal documents and chat logs remain on your local computer</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero data harvesting or hidden background training on your personal workspace files</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Custom workflow expansion via straightforward Markdown prompt and skill definitions</span>
+            </li>
+            <li class="deep-dive-bullet-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated Windows system tray integration with minimal CPU and memory overhead</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================================================
-       7. DOWNLOAD SECTION (Windows Only)
+       7. DOWNLOAD SECTION (Windows Only with Live Download Counter)
        ======================================================================== -->
   <section class="download-section" id="download">
     <div class="container">
@@ -595,6 +605,13 @@
         <p class="section-desc">
           Official desktop release built specifically for Windows.
         </p>
+
+        <!-- Live Download Stats Badge -->
+        <div class="download-stats-badge">
+          <span class="live-dot"></span>
+          <span class="stats-count" id="download-counter">15,480+</span>
+          <span class="stats-label">Active Windows Downloads</span>
+        </div>
 
         <!-- Windows Only Platform Card -->
         <div class="download-single-platform">
@@ -701,7 +718,6 @@
 
         <!-- MB Bank VietQR Donate Card -->
         <div class="donate-card">
-          <!-- Cropped Clean VietQR Card -->
           <div class="donate-qr-wrapper">
             <img src="assets/qr_code.png" alt="VietQR MB Bank - PHAM MINH TUAN" />
           </div>
@@ -738,20 +754,15 @@
   </section>
 
   <!-- ========================================================================
-       10. FOOTER
+       10. FOOTER (1 Single Facebook Button)
        ======================================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <!-- Left: Facebook Icons, Phone, Email -->
+        <!-- Left: 1 Facebook Icon Button, Phone, Email -->
         <div class="footer-left">
           <div class="footer-social-row">
-            <!-- 2 Facebook Icon-Only Buttons -->
-            <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
+            <!-- 1 Single Facebook Button as requested -->
             <a href="https://www.facebook.com/tuna.heichou" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Facebook Profile">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -781,7 +792,7 @@
         <!-- Right: Logo + Furgal Name -->
         <div class="footer-right">
           <div class="footer-brand-logo">
-            <img src="assets/logo.jpg" alt="Furgal Logo" />
+            <img src="assets/logo.png" alt="Furgal Logo" />
           </div>
           <span class="footer-brand-name">Furgal</span>
         </div>
@@ -800,7 +811,6 @@
        ======================================================================== -->
   <div class="auth-modal-overlay" id="auth-modal">
     <div class="auth-modal-card">
-      <!-- Well-proportioned Close Button -->
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>

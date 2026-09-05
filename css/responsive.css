@@ -12,8 +12,8 @@
     gap: 20px;
   }
 
-  .zigzag-item {
-    gap: 40px;
+  .deep-dive-grid {
+    gap: 24px;
   }
 }
 
@@ -36,18 +36,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .zigzag-list {
-    gap: 70px;
-  }
-
-  .zigzag-item, .zigzag-item.reverse {
+  .deep-dive-grid {
     grid-template-columns: 1fr;
-    direction: ltr;
-    gap: 30px;
-  }
-
-  .zigzag-item.reverse > * {
-    direction: ltr;
+    gap: 24px;
   }
 
   .support-container {
@@ -131,7 +122,7 @@
   }
 
   .hero-section {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 50px;
     min-height: auto;
   }
@@ -175,8 +166,12 @@
     grid-template-columns: 1fr;
   }
 
-  .zigzag-title {
-    font-size: 1.75rem;
+  .deep-dive-card {
+    padding: 30px 22px;
+  }
+
+  .deep-dive-title {
+    font-size: 1.55rem;
   }
 
   .form-row {
@@ -214,8 +209,8 @@
   }
 
   .gate-avatar-wrapper {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
   }
 
   .auth-modal-card {
